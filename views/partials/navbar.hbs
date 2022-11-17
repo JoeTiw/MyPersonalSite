@@ -1,0 +1,48 @@
+ 
+<nav class="navbar navbar-expand-lg bg-light bg-transparent fixed-top bgcolor">
+  <div class="container" id="navyLinks">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div  class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="navy" id="navLinks">
+      
+      <ul class="navbar-nav">
+    {{#each data.links}}
+        <li class="nav-item">
+          <a class="nav-link" href="{{this.url}}">{{this.label}}</a>
+        </li>
+        {{/each}}
+
+      </ul>
+     
+    </div>
+     
+    </div>
+    
+ 
+
+  
+  </div>
+   
+  </div>
+  <script>
+    var nav = document.getElementById('navyLinks');
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 100) {
+        nav.classList.add("bg-dark", "shadow");
+        
+      } else {
+        nav.classList.remove("bg-dark");
+        
+      }
+    });
+  
+  </script>
+</nav>
+
+
+
+
+
